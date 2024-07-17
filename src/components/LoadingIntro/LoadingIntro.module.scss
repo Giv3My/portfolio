@@ -1,0 +1,66 @@
+.scene {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #01070a;
+
+  .star {
+    width: 1px;
+    position: absolute;
+    top: -250px;
+    background-color: rgb(255 255 255 / 0.5);
+    animation: stars-animation linear infinite;
+  }
+
+  .rocket {
+    position: relative;
+    user-select: none;
+    animation: rocket-animation 0.2s ease infinite;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 10px;
+      height: 200px;
+      position: absolute;
+      left: 50%;
+      bottom: -200px;
+      transform: translateX(-50%);
+      background: linear-gradient(#00d0ff, transparent);
+    }
+
+    &::before {
+      filter: blur(1px);
+    }
+
+    &::after {
+      filter: blur(20px);
+    }
+  }
+}
+
+@keyframes stars-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(200vh);
+  }
+}
+
+@keyframes stars-animation-end {
+  100% {
+    transform: translateY(300vh);
+  }
+}
+
+@keyframes rocket-animation {
+  50% {
+    transform: translateY(4px);
+  }
+}

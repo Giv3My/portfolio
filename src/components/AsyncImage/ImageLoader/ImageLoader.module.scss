@@ -1,0 +1,63 @@
+.loader {
+  --c1: #784bcc;
+  --c2: #c18bff;
+  --c3: #33285e;
+  --c4: #b16dc2;
+  --duration: 1s;
+
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .loader-inline-svg circle {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation-name: loader-inline-move;
+    animation-direction: alternate;
+    animation-duration: var(--duration);
+    animation-delay: var(--delay, 0);
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.7, 0.1, 0.3, 1);
+  }
+
+  .loader-inline-svg .c1,
+  .loader-inline-svg .c5 {
+    fill: var(--c1);
+  }
+
+  .loader-inline-svg .c2 {
+    fill: var(--c2);
+  }
+
+  .loader-inline-svg .c3 {
+    --delay: calc(var(--duration) / 3 * 1);
+    fill: var(--c3);
+  }
+
+  .loader-inline-svg .c4 {
+    --delay: calc(var(--duration) / 3 * 2);
+    fill: var(--c4);
+  }
+
+  .loader-inline-svg .c5 {
+    --delay: var(--duration);
+  }
+
+  @keyframes loader-inline-move {
+    from {
+      transform: scale(0.5);
+    }
+
+    to {
+      cy: 10px;
+      cx: 10px;
+      transform: scale(1);
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.navbar {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 30px;
+
+  .logo {
+    display: flex;
+    position: relative;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: translate 0.25s ease;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 5px;
+      height: 15px;
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      opacity: 0;
+      transform: translateX(-50%);
+      background: linear-gradient(#00d0ff, transparent);
+      transition: opacity 0.2s ease;
+    }
+
+    &::before {
+      filter: blur(1px);
+    }
+
+    &::after {
+      filter: blur(5px);
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: scale-down;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        translate: 2px -2px;
+
+        &::before,
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .menu {
+    display: flex;
+    gap: 0 40px;
+    position: relative;
+    border-radius: 20px;
+    background-color: #0300145e;
+
+    .menu-item {
+      padding: 10px 20px;
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: capitalize;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      z-index: 1;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100%;
+      border-radius: 20px;
+      background-color: #251b41;
+      transition: transform 0.4s ease, width 0.2s ease;
+    }
+  }
+
+  .socials {
+    display: flex;
+    gap: 0 20px;
+
+    .link {
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      &:hover {
+        background-color: rgb(122 111 181 / 37%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    gap: 0 10px;
+
+    .logo {
+      img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    .menu {
+      gap: 0 5px;
+
+      .menu-item {
+        font-size: 16px;
+      }
+    }
+
+    .socials {
+      gap: 0 10px;
+
+      .link {
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    .menu,
+    .socials {
+      display: none;
+    }
+  }
+}

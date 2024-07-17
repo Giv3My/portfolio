@@ -1,0 +1,21 @@
+.footer {
+  width: 100%;
+  background: linear-gradient(to left, #a855f7, #06b6d4);
+  padding-top: 1px;
+
+  .wrapper {
+    padding: 30px;
+    background-color: #030014;
+
+    p {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 200;
+      color: rgba(231, 231, 231, 0.664);
+
+      &:last-child {
+        margin-top: 5px;
+      }
+    }
+  }
+}
