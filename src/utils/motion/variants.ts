@@ -16,6 +16,10 @@ export const fadeFromRight = (transition?: Transition) => fadeFrom('right', tran
 
 export const textFadeFromTop = textFadeFrom('top');
 
+export const textFadeFromLeft = textFadeFrom('left');
+
+export const textFadeFromRight = textFadeFrom('right');
+
 export const zoomIn = (initialScale: number, transition?: Transition) => {
   return {
     hidden: {
