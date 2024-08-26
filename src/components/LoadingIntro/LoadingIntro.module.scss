@@ -21,6 +21,16 @@
     user-select: none;
     animation: rocket-animation 0.2s ease infinite;
 
+    .blur {
+      position: absolute;
+      width: 100%;
+      height: 200px;
+      bottom: -200px;
+      z-index: 1;
+      backdrop-filter: blur(1.3px);
+      -webkit-backdrop-filter: blur(1.3px);
+    }
+
     &::before,
     &::after {
       content: '';
@@ -31,14 +41,6 @@
       bottom: -200px;
       transform: translateX(-50%);
       background: linear-gradient(#00d0ff, transparent);
-    }
-
-    &::before {
-      filter: blur(1px);
-    }
-
-    &::after {
-      filter: blur(20px);
     }
   }
 }

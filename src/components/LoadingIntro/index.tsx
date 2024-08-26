@@ -64,6 +64,7 @@ export const LoadingIntro: React.FC<{
             className={styles.rocket}
           >
             <img src={rocket} alt="rocket" />
+            <div className={styles.blur} />
           </motion.div>
         )}
       </AnimatePresence>
