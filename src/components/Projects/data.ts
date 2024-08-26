@@ -163,6 +163,7 @@ export const projects: Project[] = [
       projectsImages('movie-app/2.jpg'),
       projectsImages('movie-app/3.jpg'),
     ],
+
     tags: [
       {
         name: 'C#',
@@ -175,6 +176,54 @@ export const projects: Project[] = [
     ],
     stack: {
       frontend: ['C#', 'WPF'],
+    },
+  },
+  {
+    id: 6,
+    name: 'Next Pizza',
+    type: 'web',
+    year: '2024',
+    projectLink: 'https://next-pizza-lemon-seven.vercel.app',
+    githubLink: 'https://github.com/Giv3My/next-pizza',
+    thumbnail: projectsImages('next-pizza/thumbnail.jpg'),
+    images: [
+      projectsImages('next-pizza/1.jpg'),
+      projectsImages('next-pizza/2.jpg'),
+      projectsImages('next-pizza/3.jpg'),
+      projectsImages('next-pizza/4.jpg'),
+    ],
+    tags: [
+      {
+        name: 'Html',
+        bgColor: '#E34C26',
+      },
+      {
+        name: 'NextJS',
+        bgColor: '#0070f3',
+      },
+      {
+        name: 'TailwindCSS',
+        bgColor: '#38bdf8',
+      },
+      {
+        name: 'Shadcn-ui',
+        bgColor: '#f7f7f7',
+      },
+      {
+        name: 'Zustand',
+        bgColor: '#a855f7',
+      },
+    ],
+    stack: {
+      frontend: [
+        'Html',
+        'NextJS',
+        'TailwindCSS',
+        'Shadcn-ui',
+        'Zustand',
+        'React-hook-form',
+      ],
+      backend: ['Next-auth', 'PostgreSQL', 'Prisma', 'LiqPay', 'Nodemailer'],
     },
   },
 ];
